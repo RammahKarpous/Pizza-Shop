@@ -1,0 +1,179 @@
+/* =============================== Global classes =============================== */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: auto;
+}
+
+.button, button {
+    color: $white;
+    background: $pp-main-primary-color;
+    text-decoration: none;
+    padding: 18px 32px;
+    float: left;
+
+    &:hover {
+        background: lighten($pp-main-primary-color, 3%);
+    }
+}
+
+.heading-1 {
+    font-size: 50px;
+}
+
+/* =============================== Navigation styling =============================== */
+.main-nav {
+    background: $pp_third-primary-color;
+
+    .nav__ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        list-style: none;
+
+        li {
+            position: relative;
+
+            .nav__shopping-cart-count {
+                background: $pp-main-primary-color;
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                border-radius: 50%;
+                right: 22px;
+                top: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .nav__cart-count {
+                    color: $white;
+                    text-shadow: 0px 0px 6px transparentize($pp_third-primary-color, .9);
+                    margin: 0;
+                }
+            }
+
+            .nav__link {
+                color: $white;
+                display: inline-block;
+                text-decoration: none;
+                padding: 20px;
+
+                &:hover {
+                    background: lighten($pp-third-primary-color, 10%);
+                }
+            }
+
+            .nav__link--basket {
+                padding: 15px 30px;
+            }
+        }
+    }
+}
+
+/* =============================== Banner styling =============================== */
+.banner {
+    background: url('../images/headers/header_image.png') no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+
+    .banner__cta {
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .banner__heading {
+            font-weight: 300;
+        }
+
+        .banner__heading, .banner__text {
+            color: $white;
+            margin: 0;
+        }
+
+        .banner__button {
+            margin-top: 20px;
+        }
+    }
+}
+
+/* =============================== Form styling =============================== */
+.form {
+    background: lighten($gray, 30%);
+
+    .wrapper {
+        background: $light-gray;
+        position: relative;
+
+        .form__input {
+            -webkit-appearance: none;
+            padding: 18px;
+            outline-style: none;
+            background: transparent;
+            border: none;
+        }
+
+        .form__input--input-field {
+            width: calc(100% - 36px);
+        }
+
+        .form__input--submit {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            background: url('../images/icons/search-icon.svg') no-repeat center center;
+            background-size: 15px;
+            padding: 18px 32px;
+
+        }
+    }
+}
+
+/* =============================== Footer styling =============================== */
+.footer {
+    background: $pp_third-primary-color;
+    margin-top: 150px;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer__gdpr-links {
+            display: flex;
+            justify-content: space-between;
+
+            .footer__gdpr-links__link {
+                display: inline-block;
+                padding: 15px;
+                color: $white;
+                position: relative;
+
+                &:hover {
+                    background: lighten($pp-third-primary-color, 10%);
+                }
+            }
+        }
+
+        .footer__copyright {
+            .small-text {
+                color: $white;
+            }
+        }
+    }
+}
