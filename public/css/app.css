@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);/* =============================== Global classes =============================== */
 
 body {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 
