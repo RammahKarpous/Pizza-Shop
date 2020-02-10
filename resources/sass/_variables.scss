@@ -1,12 +1,5 @@
-// Body
-$body-bg: #f8fafc;
-
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
-
-$font: 'Italianno', cursive;
+// Fonts
+$montserrat: 'Montserrat', sans-serif;
 
 // Primary colors
 $pp_main-primary-color: #BF3111;
@@ -19,3 +12,56 @@ $green: #4F7302;
 $light-orange: #F2A74B;
 $light-gray: #EDEDED;
 $gray: #8E8E8E;
+
+// Global variables
+body {
+    font-family: $montserrat;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: auto;
+}
+
+.button, button {
+    color: $white;
+    background: $pp-main-primary-color;
+    text-decoration: none;
+    padding: 18px 32px;
+    float: left;
+
+    &:hover {
+        background: lighten($pp-main-primary-color, 3%);
+    }
+}
+
+.heading-1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.heading-2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.red-color {
+    color: $pp_main-primary-color;
+}
+
+footer, .section {
+    margin-top: 150px;
+}
+
+.section .section__text {
+    margin: 5px 0 15px;
+}

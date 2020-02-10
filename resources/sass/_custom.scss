@@ -1,36 +1,6 @@
 /* =============================== Global classes =============================== */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-.wrapper {
-    width: 1280px;
-    margin: auto;
-}
-
-.button, button {
-    color: $white;
-    background: $pp-main-primary-color;
-    text-decoration: none;
-    padding: 18px 32px;
-    float: left;
-
-    &:hover {
-        background: lighten($pp-main-primary-color, 3%);
-    }
-}
-
-.heading-1 {
-    font-size: 50px;
-}
-
 /* =============================== Navigation styling =============================== */
 .main-nav {
     background: $pp_third-primary-color;
@@ -102,7 +72,6 @@ a {
 
         .banner__heading, .banner__text {
             color: $white;
-            margin: 0;
         }
 
         .banner__button {
@@ -144,10 +113,12 @@ a {
     }
 }
 
+/* =============================== Custom pizza section styling =============================== */
+
+
 /* =============================== Footer styling =============================== */
 .footer {
     background: $pp_third-primary-color;
-    margin-top: 150px;
 
     .wrapper {
         display: flex;

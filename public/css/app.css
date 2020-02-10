@@ -1,12 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);/* =============================== Global classes =============================== */
-
-body {
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
 }
 
 .wrapper {
@@ -30,7 +32,28 @@ button:hover {
 
 .heading-1 {
   font-size: 50px;
+  margin: 0;
 }
+
+.heading-2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.red-color {
+  color: #BF3111;
+}
+
+footer,
+.section {
+  margin-top: 150px;
+}
+
+.section .section__text {
+  margin: 5px 0 15px;
+}
+
+/* =============================== Global classes =============================== */
 
 /* =============================== Navigation styling =============================== */
 
@@ -116,7 +139,6 @@ button:hover {
 .banner .banner__cta .banner__heading,
 .banner .banner__cta .banner__text {
   color: #ffffff;
-  margin: 0;
 }
 
 .banner .banner__cta .banner__button {
@@ -157,11 +179,12 @@ button:hover {
   padding: 18px 32px;
 }
 
+/* =============================== Custom pizza section styling =============================== */
+
 /* =============================== Footer styling =============================== */
 
 .footer {
   background: #222326;
-  margin-top: 150px;
 }
 
 .footer .wrapper {
