@@ -9,4 +9,8 @@ class CustomPizzasController extends Controller
     public function customPizza() {
         return view('pizzas.create');
     }
+
+    public function add( Request $request ) {
+
+    }
 }

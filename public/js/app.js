@@ -49486,13 +49486,7 @@ var app = new Vue({
   components: {
     'example-component': _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
-}); // Custom Scripts
-// let input = document.querySelector('.search__input');
-// let output = document.querySelector('.output');
-//
-// input.addEventListener('input', function (e) {
-//     output.textContent = e.target.value;
-// });
+});
 
 /***/ }),
 

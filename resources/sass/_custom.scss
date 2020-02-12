@@ -82,39 +82,95 @@
 
 /* =============================== Form styling =============================== */
 .form {
-    background: lighten($gray, 30%);
 
     .wrapper {
         background: $light-gray;
         position: relative;
+    }
 
-        .form__input {
-            -webkit-appearance: none;
-            padding: 18px;
-            outline-style: none;
-            background: transparent;
-            border: none;
+    .form__input--input-field {
+        width: calc(100% - 36px);
+    }
+
+    .form__input {
+        -webkit-appearance: none;
+        padding: 18px;
+        outline-style: none;
+        background: transparent;
+        border: none;
+    }
+
+    .form__input--submit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        background: url('../images/icons/search-icon.svg') no-repeat center center;
+        background-size: 15px;
+        padding: 18px 32px;
+    }
+}
+
+/* =============================== Pizza grid styling =============================== */
+.section__pizzas {
+    .heading-2 {
+        margin-bottom: 30px;
+    }
+
+    .section__pizza-card {
+
+        .pizza-card__image {
+            width: 100%;
         }
 
-        .form__input--input-field {
-            width: calc(100% - 36px);
-        }
+        .buttons.grid {
+            gap: 0;
+            margin-top: -4px;
 
-        .form__input--submit {
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: flex;
-            background: url('../images/icons/search-icon.svg') no-repeat center center;
-            background-size: 15px;
-            padding: 18px 32px;
+            .button {
+                text-align: center;
+            }
 
+            .pizza-card__button--price {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                color: $white;
+                padding: 15px;
+            }
         }
     }
 }
 
-/* =============================== Custom pizza section styling =============================== */
+/* =============================== Custom pizza form styling =============================== */
+.custom-pizza {
+    .custom-pizza__name {
+        margin: 10px 0 30px;
+    }
 
+    .custom-pizza__toppings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 630px;
+        height: 630px;
+
+        .custom-pizza__image {
+            transition: .5s;
+        }
+    }
+
+    .small-text {
+        margin-top: 20px;
+    }
+}
+
+
+.placeholder-style {
+    color: gray;
+    font-style: italic;
+    font-weight: 300;
+}
 
 /* =============================== Footer styling =============================== */
 .footer {

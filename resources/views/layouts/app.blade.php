@@ -19,5 +19,6 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('extra-scripts')
 </body>
 </html>

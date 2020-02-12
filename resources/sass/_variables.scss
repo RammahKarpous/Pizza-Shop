@@ -44,24 +44,94 @@ p {
     }
 }
 
+// Headings and text
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 .heading-1 {
     font-size: 50px;
-    margin: 0;
 }
 
 .heading-2 {
     font-size: 40px;
-    margin: 0;
 }
 
+.heading-3 {
+    font-size: 30px;
+}
+
+.small-text {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+// Colors
 .red-color {
     color: $pp_main-primary-color;
 }
 
+.black-color {
+    color: $pp_third-primary-color;
+}
+
+.red-bg {
+    background: $pp_main-primary-color;
+}
+
+.darker-red-bg {
+    background: $pp_second-primary-color;
+
+    &:hover {
+        background: darken($pp_second-primary-color, 5%);
+    }
+}
+
+.gray-bg {
+    background: lighten($gray, 30%);
+}
+
+.gray-border {
+    border: 1px solid lighten($gray, 30%) !important;
+}
+
+// Sections
 footer, .section {
     margin-top: 150px;
 }
 
 .section .section__text {
     margin: 5px 0 15px;
+}
+
+// Grid
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+// Spacing
+.no-margins {
+    margin: 0;
+}
+
+.top-m {
+    margin-top: 10px;
+}
+
+.top-m, .left-m {
+
+}
+
+// Sizing
+.width-100 {
+    width: 100%;
 }
