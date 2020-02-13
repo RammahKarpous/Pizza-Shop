@@ -30,6 +30,12 @@ button:hover {
   background: #cd3512;
 }
 
+label,
+.label {
+  color: #8E8E8E;
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -104,6 +110,22 @@ footer,
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.flex {
+  display: -webkit-box;
+  display: flex;
+}
+
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row;
+}
+
+.flex-space-between {
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .no-margins {
@@ -277,7 +299,7 @@ footer,
   margin: 10px 0 30px;
 }
 
-.custom-pizza .custom-pizza__toppings {
+.custom-pizza .custom-pizza__topping-images {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -288,13 +310,29 @@ footer,
   height: 630px;
 }
 
-.custom-pizza .custom-pizza__toppings .custom-pizza__image {
+.custom-pizza .custom-pizza__topping-images .custom-pizza__image {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .custom-pizza .small-text {
   margin-top: 20px;
+}
+
+.custom-pizza .topping-tag-wrapper {
+  margin: 5px;
+}
+
+.custom-pizza .topping-tag-wrapper input {
+  display: none;
+}
+
+.custom-pizza .topping-tag-wrapper input:checked ~ .topping-checkbox-label {
+  color: #8C0410;
+}
+
+.custom-pizza .topping-tag-wrapper .topping-checkbox-label {
+  padding: 5px;
 }
 
 .placeholder-style {

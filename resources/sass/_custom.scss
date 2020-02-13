@@ -148,7 +148,7 @@
         margin: 10px 0 30px;
     }
 
-    .custom-pizza__toppings {
+    .custom-pizza__topping-images {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -163,8 +163,30 @@
     .small-text {
         margin-top: 20px;
     }
-}
 
+    .right-column__toppings {
+
+        .custom-pizza__topping {
+
+        }
+    }
+
+    .topping-tag-wrapper {
+        margin: 5px;
+
+        input {
+            display: none;
+
+            &:checked ~ .topping-checkbox-label {
+                color: #8C0410;
+            }
+        }
+
+        .topping-checkbox-label {
+            padding: 5px;
+        }
+    }
+}
 
 .placeholder-style {
     color: gray;

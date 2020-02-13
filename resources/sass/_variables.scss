@@ -44,6 +44,11 @@ p {
     }
 }
 
+label, .label {
+    color: $gray;
+    font-size: 16px;
+}
+
 // Headings and text
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -116,6 +121,19 @@ footer, .section {
 
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+// Flex
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-flow: row;
+}
+
+.flex-space-between {
+    justify-content: space-between;
 }
 
 // Spacing

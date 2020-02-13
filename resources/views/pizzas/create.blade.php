@@ -7,7 +7,7 @@
             <div class="custom-pizza__left-column">
                 <h2 class="heading-2 black-color custom-pizza__name placeholder-style">Your custom pizza name</h2>
 
-                <div class="custom-pizza__toppings">
+                <div class="custom-pizza__topping-images">
                     <div class="pizza-toppings"></div>
                     <img src="{{ asset('images/pizza-base.png') }}" alt="Pizza base" class="custom-pizza__image width-100">
                 </div>
@@ -21,6 +21,20 @@
                         {{ Form::text('pizza_name', '', ['class' => 'form__input custom-pizza__input-field form__input--input-field gray-border top-m', 'maxlength' => 20]) }}
                     </div>
                 {!! Form::close() !!}
+
+                <div class="section m-top flex flex-row topping-tags">
+                    <span class="label">Toppings</span>
+
+                    <div class="form-field topping-tag-wrapper">
+                        <input type="checkbox" name="toppings" id="tomato-sauce">
+                        <label class="topping-checkbox topping-checkbox--disabled" for="tomato-sauce">Tomato Sauce</label>
+                    </div>
+
+                    <div class="form-field topping-tag-wrapper">
+                        <input type="checkbox" name="toppings" id="cheese" disabled checked>
+                        <label class="topping-checkbox-label topping-checkbox--disabled" for="cheese">Cheese</label>
+                    </div>
+                </div>
             </div>
 
         </div>
