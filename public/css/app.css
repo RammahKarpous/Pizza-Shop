@@ -32,7 +32,7 @@ button:hover {
 
 label,
 .label {
-  color: #8E8E8E;
+  color: #222326;
   font-size: 16px;
 }
 
@@ -120,7 +120,7 @@ footer,
 .flex-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-          flex-flow: row;
+          flex-flow: row wrap;
 }
 
 .flex-space-between {
@@ -128,16 +128,41 @@ footer,
           justify-content: space-between;
 }
 
+.block {
+  display: block;
+}
+
 .no-margins {
   margin: 0;
 }
 
 .top-m {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .width-100 {
   width: 100%;
+}
+
+.tag-wrapper {
+  margin: 5px;
+}
+
+.tag-wrapper .tag-label {
+  padding: 10px 10px 10px 40px;
+  background: #BF3111 url(/images/checkbox-unchecked.svg?4a5a43cdf8f56f2df0ed8b0de8358ed9) no-repeat 15px center;
+  background-size: 15px;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.tag-wrapper input {
+  display: none;
+}
+
+.topping-tags .tag-label--disabled {
+  background: rgba(140, 4, 16, 0.5) url(/images/checkbox-checked.svg?013f3e5159ac32de7d0194ef94292dc8) no-repeat 15px center !important;
+  background-size: 15px !important;
 }
 
 /* =============================== Global classes =============================== */
@@ -251,6 +276,10 @@ footer,
   border: none;
 }
 
+.form .form__input--10-padding {
+  padding: 10px;
+}
+
 .form .form__input--submit {
   position: absolute;
   right: 0;
@@ -319,20 +348,23 @@ footer,
   margin-top: 20px;
 }
 
-.custom-pizza .topping-tag-wrapper {
-  margin: 5px;
+.custom-pizza .right-column__toppings .topping-tags .tag-label {
+  background: #BF3111 url(/images/checkbox-unchecked.svg?4a5a43cdf8f56f2df0ed8b0de8358ed9) no-repeat 15px center;
+  background-size: 15px;
 }
 
-.custom-pizza .topping-tag-wrapper input {
-  display: none;
+.custom-pizza .right-column__toppings .topping-tags input:checked ~ .tag-label {
+  background: #8C0410 url(/images/checkbox-checked.svg?013f3e5159ac32de7d0194ef94292dc8) no-repeat 15px center;
+  background-size: 15px;
 }
 
-.custom-pizza .topping-tag-wrapper input:checked ~ .topping-checkbox-label {
-  color: #8C0410;
+.custom-pizza .right-column__toppings .size-tags input:checked ~ .tag-label {
+  background: #8C0410 url(/images/checkbox-checked.svg?013f3e5159ac32de7d0194ef94292dc8) no-repeat 15px center;
+  background-size: 15px;
 }
 
-.custom-pizza .topping-tag-wrapper .topping-checkbox-label {
-  padding: 5px;
+.label {
+  margin: 15px;
 }
 
 .placeholder-style {

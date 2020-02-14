@@ -45,7 +45,7 @@ p {
 }
 
 label, .label {
-    color: $gray;
+    color: $pp_third-primary-color;
     font-size: 16px;
 }
 
@@ -109,7 +109,7 @@ footer, .section {
     margin: 5px 0 15px;
 }
 
-// Grid
+// Display
 .grid {
     display: grid;
     gap: 20px;
@@ -123,17 +123,20 @@ footer, .section {
     grid-template-columns: repeat(3, 1fr);
 }
 
-// Flex
 .flex {
     display: flex;
 }
 
 .flex-row {
-    flex-flow: row;
+    flex-flow: row wrap;
 }
 
 .flex-space-between {
     justify-content: space-between;
+}
+
+.block {
+    display: block;
 }
 
 // Spacing
@@ -142,7 +145,7 @@ footer, .section {
 }
 
 .top-m {
-    margin-top: 10px;
+    margin-top: 10px !important;
 }
 
 .top-m, .left-m {
@@ -153,3 +156,27 @@ footer, .section {
 .width-100 {
     width: 100%;
 }
+
+// Forms
+$bg-size: 15px;
+.tag-wrapper {
+    margin: 5px;
+
+    .tag-label {
+        padding: 10px 10px 10px 40px;
+        background: $pp_main-primary-color url("../images/icons/checkbox-unchecked.svg") no-repeat 15px center;
+        background-size: $bg-size;
+        color: $white;
+        display: inline-block;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.topping-tags .tag-label--disabled {
+    background: transparentize($pp_second-primary-color, .5) url("../images/icons/checkbox-checked.svg") no-repeat 15px center !important;
+    background-size: $bg-size !important;
+}
+

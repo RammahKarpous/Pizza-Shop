@@ -100,6 +100,10 @@
         border: none;
     }
 
+    .form__input--10-padding {
+        padding: 10px;
+    }
+
     .form__input--submit {
         position: absolute;
         right: 0;
@@ -166,26 +170,29 @@
 
     .right-column__toppings {
 
-        .custom-pizza__topping {
+        .topping-tags {
+            .tag-label {
+                background: $pp_main-primary-color url("../images/icons/checkbox-unchecked.svg") no-repeat 15px center;
+                background-size: $bg-size;
+            }
 
-        }
-    }
-
-    .topping-tag-wrapper {
-        margin: 5px;
-
-        input {
-            display: none;
-
-            &:checked ~ .topping-checkbox-label {
-                color: #8C0410;
+            input:checked ~ .tag-label {
+                background: $pp_second-primary-color url("../images/icons/checkbox-checked.svg") no-repeat 15px center;
+                background-size: $bg-size;
             }
         }
 
-        .topping-checkbox-label {
-            padding: 5px;
+        .size-tags {
+            input:checked ~ .tag-label {
+                background: $pp_second-primary-color url("../images/icons/checkbox-checked.svg") no-repeat 15px center;
+                background-size: $bg-size;
+            }
         }
     }
+}
+
+.label {
+    margin: 15px;
 }
 
 .placeholder-style {
