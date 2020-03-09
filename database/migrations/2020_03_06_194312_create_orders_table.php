@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->bigInteger('pizza_id');
+            $table->integer('quantity');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('pizza_id')->references('id')->on('pizzas');
