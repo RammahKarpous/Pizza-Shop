@@ -23,7 +23,7 @@
                         {{ Form::text('pizza_name', '', ['class' => 'form__input custom-pizza__input-field form__input--input-field gray-border top-m', 'maxlength' => 20]) }}
                     </div>
 
-                    <span class="label top-m block">Sizes</span>
+                    <span class="label width-100 block no-margins mt-30">Sizes</span>
                     <div class="section top-m flex flex-row size-tags">
                         @if(count($sizes) > 0)
                             @foreach($sizes as $size)
@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="section top-m flex flex-row topping-tags">
-                        <span class="label">Toppings</span>
+                        <span class="width-100 block no-margins mt-30 mb-10">Toppings</span>
 
                         <div class="form-field tag-wrapper">
                             <input type="checkbox" name="toppings" id="tomato-sauce" disabled checked>
@@ -59,7 +59,7 @@
                     </div>
 
                     <div  class="section mt-30">
-                        <h2 class="heading-3">Delivery options</h2>
+                        <h2 class="heading-3 width-100 block">Delivery options</h2>
 
                         <div class="flex row">
 
