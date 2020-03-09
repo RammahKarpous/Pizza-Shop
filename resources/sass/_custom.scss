@@ -55,7 +55,7 @@
 
 /* =============================== Banner styling =============================== */
 .banner {
-    background: url('../images/headers/header_image.png') no-repeat;
+    background: url('/images/headers/header_image.png') no-repeat;
     background-size: cover;
     height: 500px;
     position: relative;
@@ -109,7 +109,7 @@
         right: 0;
         top: 0;
         display: flex;
-        background: url('../images/icons/search-icon.svg') no-repeat center center;
+        background: url('/images/icons/search-icon.svg') no-repeat center center;
         background-size: 15px;
         padding: 18px 32px;
     }
@@ -167,28 +167,6 @@
     .small-text {
         margin-top: 20px;
     }
-
-    .right-column__toppings {
-
-        .topping-tags {
-            .tag-label {
-                background: $pp_main-primary-color url("../images/icons/checkbox-unchecked.svg") no-repeat 15px center;
-                background-size: $bg-size;
-            }
-
-            input:checked ~ .tag-label {
-                background: $pp_second-primary-color url("../images/icons/checkbox-checked.svg") no-repeat 15px center;
-                background-size: $bg-size;
-            }
-        }
-
-        .size-tags {
-            input:checked ~ .tag-label {
-                background: $pp_second-primary-color url("../images/icons/checkbox-checked.svg") no-repeat 15px center;
-                background-size: $bg-size;
-            }
-        }
-    }
 }
 
 .label {
@@ -199,6 +177,16 @@
     color: gray;
     font-style: italic;
     font-weight: 300;
+}
+
+/* =============================== Pizza page styling =============================== */
+.pizza {
+
+    .pizza--image {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 /* =============================== Footer styling =============================== */

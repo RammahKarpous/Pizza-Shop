@@ -152,6 +152,10 @@ footer, .section {
 
 }
 
+.mt-30 {
+    margin-top: 30px;
+}
+
 // Sizing
 .width-100 {
     width: 100%;
@@ -164,8 +168,6 @@ $bg-size: 15px;
 
     .tag-label {
         padding: 10px 10px 10px 40px;
-        background: $pp_main-primary-color url("../images/icons/checkbox-unchecked.svg") no-repeat 15px center;
-        background-size: $bg-size;
         color: $white;
         display: inline-block;
     }
@@ -175,8 +177,52 @@ $bg-size: 15px;
     }
 }
 
+.topping-tags {
+    .tag-label {
+        background: $pp_main-primary-color
+                    url("/images/icons/checkbox-unchecked.svg")
+                    no-repeat
+                    15px
+                    center;
+        background-size: $bg-size;
+    }
+
+    input:checked ~ .tag-label {
+        background: $pp_second-primary-color
+                    url("/images/icons/checkbox-checked.svg")
+                    no-repeat
+                    15px
+                    center;
+        background-size: $bg-size;
+    }
+}
+
 .topping-tags .tag-label--disabled {
-    background: transparentize($pp_second-primary-color, .5) url("../images/icons/checkbox-checked.svg") no-repeat 15px center !important;
+    background: transparentize($pp_second-primary-color, .5)
+                url("/images/icons/checkbox-checked.svg")
+                no-repeat
+                15px
+                center !important;
     background-size: $bg-size !important;
+}
+
+.size-tags {
+    .tag-label {
+        background: $pp_main-primary-color
+                    url("/images/icons/radio-unchecked.svg")
+                    no-repeat
+                    15px
+                    center;
+        background-size: $bg-size;
+    }
+
+    input:checked ~ .tag-label {
+        background: $pp_second-primary-color
+                    url("/images/icons/radio-checked.svg")
+                    no-repeat
+                    15px
+                    center;
+        background-size: $bg-size;
+    }
 }
 

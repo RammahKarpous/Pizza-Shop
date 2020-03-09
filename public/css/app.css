@@ -140,6 +140,10 @@ footer,
   margin-top: 10px !important;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 .width-100 {
   width: 100%;
 }
@@ -150,8 +154,6 @@ footer,
 
 .tag-wrapper .tag-label {
   padding: 10px 10px 10px 40px;
-  background: #BF3111 url(/images/checkbox-unchecked.svg?4a5a43cdf8f56f2df0ed8b0de8358ed9) no-repeat 15px center;
-  background-size: 15px;
   color: #ffffff;
   display: inline-block;
 }
@@ -160,9 +162,29 @@ footer,
   display: none;
 }
 
+.topping-tags .tag-label {
+  background: #BF3111 url("/images/icons/checkbox-unchecked.svg") no-repeat 15px center;
+  background-size: 15px;
+}
+
+.topping-tags input:checked ~ .tag-label {
+  background: #8C0410 url("/images/icons/checkbox-checked.svg") no-repeat 15px center;
+  background-size: 15px;
+}
+
 .topping-tags .tag-label--disabled {
-  background: rgba(140, 4, 16, 0.5) url(/images/checkbox-checked.svg?013f3e5159ac32de7d0194ef94292dc8) no-repeat 15px center !important;
+  background: rgba(140, 4, 16, 0.5) url("/images/icons/checkbox-checked.svg") no-repeat 15px center !important;
   background-size: 15px !important;
+}
+
+.size-tags .tag-label {
+  background: #BF3111 url("/images/icons/radio-unchecked.svg") no-repeat 15px center;
+  background-size: 15px;
+}
+
+.size-tags input:checked ~ .tag-label {
+  background: #8C0410 url("/images/icons/radio-checked.svg") no-repeat 15px center;
+  background-size: 15px;
 }
 
 /* =============================== Global classes =============================== */
@@ -230,7 +252,7 @@ footer,
 /* =============================== Banner styling =============================== */
 
 .banner {
-  background: url(/images/header_image.png?6039522c7f3d5dd22205400517117155) no-repeat;
+  background: url("/images/headers/header_image.png") no-repeat;
   background-size: cover;
   height: 500px;
   position: relative;
@@ -286,7 +308,7 @@ footer,
   top: 0;
   display: -webkit-box;
   display: flex;
-  background: url(/images/search-icon.svg?4016685938420741d7ca2dea5f64ce00) no-repeat center center;
+  background: url("/images/icons/search-icon.svg") no-repeat center center;
   background-size: 15px;
   padding: 18px 32px;
 }
@@ -348,21 +370,6 @@ footer,
   margin-top: 20px;
 }
 
-.custom-pizza .right-column__toppings .topping-tags .tag-label {
-  background: #BF3111 url(/images/checkbox-unchecked.svg?4a5a43cdf8f56f2df0ed8b0de8358ed9) no-repeat 15px center;
-  background-size: 15px;
-}
-
-.custom-pizza .right-column__toppings .topping-tags input:checked ~ .tag-label {
-  background: #8C0410 url(/images/checkbox-checked.svg?013f3e5159ac32de7d0194ef94292dc8) no-repeat 15px center;
-  background-size: 15px;
-}
-
-.custom-pizza .right-column__toppings .size-tags input:checked ~ .tag-label {
-  background: #8C0410 url(/images/checkbox-checked.svg?013f3e5159ac32de7d0194ef94292dc8) no-repeat 15px center;
-  background-size: 15px;
-}
-
 .label {
   margin: 15px;
 }
@@ -371,6 +378,12 @@ footer,
   color: gray;
   font-style: italic;
   font-weight: 300;
+}
+
+/* =============================== Pizza page styling =============================== */
+
+.pizza .pizza--image img {
+  width: 100%;
 }
 
 /* =============================== Footer styling =============================== */

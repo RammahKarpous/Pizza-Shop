@@ -20,42 +20,51 @@
                         {{ Form::label('pizza_name', 'Pizza Name', ['class' => 'small-text']) }}
                         {{ Form::text('pizza_name', '', ['class' => 'form__input custom-pizza__input-field form__input--input-field gray-border top-m', 'maxlength' => 20]) }}
                     </div>
-                {!! Form::close() !!}
 
-                <span class="label top-m block">Sizes</span>
-                <div class="section top-m flex flex-row size-tags">
-                    @if(count($sizes) > 0)
-                        @foreach($sizes as $size)
+                    <span class="label top-m block">Sizes</span>
+                    <div class="section top-m flex flex-row size-tags">
+                        @if(count($sizes) > 0)
+                            @foreach($sizes as $size)
+                                <div class="form-field tag-wrapper">
+                                    <input type="radio" name="sizes" id="{{ $size->size  }}">
+                                    <label class="tag-label" for="{{ $size->size  }}">{{ $size->size }}</label>
+                                </div>
+                            @endforeach
+                            @else
+                            <p>There are no sizes available</p>
+                        @endif
+                    </div>
+
+                    <div class="section top-m flex flex-row topping-tags">
+                        <span class="label">Toppings</span>
+
+                        <div class="form-field tag-wrapper">
+                            <input type="checkbox" name="toppings" id="tomato-sauce" disabled checked>
+                            <label class="tag-label tag-label--disabled cb-bg" for="tomato-sauce">Tomato Sauce</label>
+                        </div>
+
+                        <div class="form-field tag-wrapper">
+                            <input type="checkbox" name="toppings" id="cheese" disabled checked>
+                            <label class="tag-label tag-label--disabled" for="cheese">Cheese</label>
+                        </div>
+
+                        @foreach($toppings as $topping)
                             <div class="form-field tag-wrapper">
-                                <input type="radio" name="sizes" id="{{ $size->size  }}">
-                                <label class="tag-label" for="{{ $size->size  }}">{{ $size->size }}</label>
+                                <input type="checkbox" name="toppings" id="{{ $topping->topping  }}">
+                                <label class="tag-label" for="{{ $topping->topping  }}">{{ $topping->name }}</label>
                             </div>
                         @endforeach
-                        @else
-                        <p>There are no sizes available</p>
-                    @endif
-                </div>
-
-                <div class="section top-m flex flex-row topping-tags">
-                    <span class="label">Toppings</span>
-
-                    <div class="form-field tag-wrapper">
-                        <input type="checkbox" name="toppings" id="tomato-sauce" disabled checked>
-                        <label class="tag-label tag-label--disabled" for="tomato-sauce">Tomato Sauce</label>
                     </div>
 
-                    <div class="form-field tag-wrapper">
-                        <input type="checkbox" name="toppings" id="cheese" disabled checked>
-                        <label class="tag-label tag-label--disabled" for="cheese">Cheese</label>
-                    </div>
+                    <div  class="section mt-30">
+                        <h2 class="heading-3">Delivery options</h2>
 
-                    @foreach($toppings as $topping)
-                        <div class="form-field tag-wrapper">
-                            <input type="checkbox" name="toppings" id="{{ $topping->topping  }}">
-                            <label class="tag-label" for="{{ $topping->topping  }}">{{ $topping->name }}</label>
+                        <div class="flex row">
+
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+
+                {!! Form::close() !!}
             </div>
 
         </div>

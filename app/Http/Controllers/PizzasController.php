@@ -7,10 +7,10 @@ use App\Pizza;
 
 class PizzasController extends Controller {
     public function pizza( $slug ) {
-        $pizza = Pizza::where( 'slug', $slug )->first();
 
         return view( 'pizzas.pizza', [
-            'pizza' => $pizza
+            'pizza' => Pizza::where( 'slug', $slug )->first(),
+            'relatedPizzas' => Pizza::all()->where('slug', '!=', $slug)
         ] );
     }
 }

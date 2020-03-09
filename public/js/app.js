@@ -49486,6 +49486,13 @@ var app = new Vue({
   components: {
     'example-component': _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
+}); // Custom js code
+
+var links = document.querySelectorAll('a[href="#"');
+links.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+  });
 });
 
 /***/ }),

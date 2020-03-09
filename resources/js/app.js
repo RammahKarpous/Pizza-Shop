@@ -10,3 +10,13 @@ const app = new Vue({
         'example-component': ExampleComponent
     }
 });
+
+
+// Custom js code
+let links = document.querySelectorAll('a[href="#"');
+
+links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+});
