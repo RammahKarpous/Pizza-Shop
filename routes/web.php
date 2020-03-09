@@ -17,3 +17,7 @@ Route::get('/custom_pizza', 'CustomPizzasController@customPizza');
 Route::get('/pizza/{slug}', 'PizzasController@pizza');
 
 Route::post('/add', 'CustomPizzasController@add');
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index');
