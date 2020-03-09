@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Create your own pizza')
+
 @section('content')
     <div class="wrapper section">
         <h1 class="heading-1 black-color">Create your custom pizza</h1>
