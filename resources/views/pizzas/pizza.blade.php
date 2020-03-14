@@ -3,7 +3,7 @@
 @section('title', $pizza->name)
 
 @section('content')
-    <div class="wrapper section pizza grid grid-2">
+    <div class="wrapper section pizza grid grid-2 gap-60px">
 
         <div class="pizza--image">
             <img src="{{ asset('images/pizzas/' . $pizza->image ) }}" alt="{{ $pizza->name }} pizza image">
@@ -12,6 +12,20 @@
         <div class="pizza--info">
             <h1 class="heading-1 red-color">{{ $pizza->name }}</h1>
             <p>{{ $pizza->description }}</p>
+
+            <span class="label width-100 block no-margins mt-30">Sizes</span>
+            <div class="section mt-10px flex flex-row size-tags">
+                @if(count($sizes) > 0)
+                    @foreach($sizes as $size)
+                        <div class="form-field tag-wrapper">
+                            <input type="radio" name="sizes" id="{{ $size->size  }}">
+                            <label class="tag-label" for="{{ $size->size  }}">{{ $size->size }}</label>
+                        </div>
+                    @endforeach
+                @else
+                    <p>There are no sizes available</p>
+                @endif
+            </div>
         </div>
     </div>
 

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Home | PizzaPalace')
+@section('title', 'Home')
 
 @section('content')
 
@@ -19,7 +19,7 @@
     {!! Form::close() !!}
 
     <div class="wrapper section section__pizzas">
-        <h2 class="heading-2 black-color">Pizzas</h2>
+        <h2 class="heading-2">Pizzas</h2>
 
         <div class="grid grid-3">
             @if(count($pizzas) > 0)

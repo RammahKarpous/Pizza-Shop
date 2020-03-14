@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <title>@yield('title')</title>
+    <title>@yield('title') | PizzaPalace</title>
 </head>
 <body>
 <div id="app">

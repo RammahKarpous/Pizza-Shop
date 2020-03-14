@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer {{Route::is('login', 'register') ? 'footer--fixed' : ''}} ">
     <div class="wrapper">
         <div class="footer__gdpr-links">
             <a href="#" class="footer__gdpr-links__link">

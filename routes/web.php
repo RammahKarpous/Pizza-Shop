@@ -11,13 +11,37 @@
 |
 */
 
+// =========== PagesController ===========
+// Get requests
 Route::get('/', 'PagesController@index');
-Route::get('/custom_pizza', 'CustomPizzasController@customPizza');
 
+
+
+
+// =========== PizzasController ===========
+// Get requests
 Route::get('/pizza/{slug}', 'PizzasController@pizza');
 
+
+
+
+// =========== CustomPizzasController ===========
+// Get requests
+Route::get('/custom_pizza', 'CustomPizzasController@customPizza');
+
+// Post requests
 Route::post('/add', 'CustomPizzasController@add');
 
+// Delete requests
+
+// Put requests
+
+
+
+
+// =========== HomeController ===========
+// Get requests
 Auth::routes();
 
+// Auth routes
 Route::get('/dashboard', 'HomeController@index');

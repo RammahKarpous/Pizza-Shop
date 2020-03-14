@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Size;
 use Illuminate\Http\Request;
 use App\Pizza;
 
@@ -10,7 +11,8 @@ class PizzasController extends Controller {
 
         return view( 'pizzas.pizza', [
             'pizza' => Pizza::where( 'slug', $slug )->first(),
-            'relatedPizzas' => Pizza::all()->where('slug', '!=', $slug)
+            'relatedPizzas' => Pizza::all()->where('slug', '!=', $slug),
+            'sizes' => Size::all()
         ] );
     }
 }

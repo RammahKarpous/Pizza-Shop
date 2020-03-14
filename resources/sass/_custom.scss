@@ -169,10 +169,6 @@
     }
 }
 
-.label {
-    margin: 15px;
-}
-
 .placeholder-style {
     color: gray;
     font-style: italic;
@@ -192,6 +188,12 @@
 /* =============================== Footer styling =============================== */
 .footer {
     background: $pp_third-primary-color;
+
+    &--fixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
 
     .wrapper {
         display: flex;
