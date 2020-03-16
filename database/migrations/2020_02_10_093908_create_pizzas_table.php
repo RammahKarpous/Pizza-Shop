@@ -21,7 +21,6 @@ class CreatePizzasTable extends Migration
             $table->string('slug');
             $table->text('description');
             $table->string('image');
-            $table->string('toppings');
             $table->timestamps();
         });
     }

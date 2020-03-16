@@ -5,3 +5,6 @@ links.forEach((link) => {
         e.preventDefault();
     });
 });
+
+let checked = document.querySelector('.size-tags input');
+checked.checked = "true";

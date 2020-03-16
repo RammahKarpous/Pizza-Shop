@@ -18,7 +18,7 @@
                 @if(count($sizes) > 0)
                     @foreach($sizes as $size)
                         <div class="form-field tag-wrapper">
-                            <input type="radio" name="sizes" id="{{ $size->size  }}">
+                            <input type="radio" name="sizes" value="{{ $size->size }}" id="{{ $size->size  }}">
                             <label class="tag-label" for="{{ $size->size  }}">{{ $size->size }}</label>
                         </div>
                     @endforeach

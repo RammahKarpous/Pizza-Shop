@@ -99,6 +99,8 @@ links.forEach(function (link) {
     e.preventDefault();
   });
 });
+var checked = document.querySelector('.size-tags input');
+checked.checked = "true";
 
 /***/ }),
 
