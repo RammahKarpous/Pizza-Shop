@@ -29,7 +29,7 @@
                     @if(count($sizes) > 0)
                         @foreach($sizes as $size)
                             <div class="form-field tag-wrapper">
-                                <input type="radio" name="sizes" id="{{ $size->size  }}">
+                                <input type="radio" name="sizes" value="{{ $size->topping_price  }}" id="{{ $size->size  }}">
                                 <label class="tag-label" for="{{ $size->size  }}">{{ $size->size }}</label>
                             </div>
                         @endforeach
@@ -75,24 +75,27 @@
                         </div>
                     </div>
 
-                    <div class="forms">
-                        <div class="input-group collect-from-store mt-10px grid collect">
-                            <h4 class="heading-4">Select store</h4>
-                            {{ Form::label('city_name', 'Please select your city name', ['class' => 'width-100 block no-margins mt-10 mb-10']) }}
-                            <datalist>
+                    {{--                    <div class="forms">--}}
+                    {{--                        <div class="input-group collect-from-store mt-10px grid collect">--}}
+                    {{--                            <h4 class="heading-4">Select store</h4>--}}
+                    {{--                            {{ Form::label('city_name', 'Please select your city name', ['class' => 'width-100 block no-margins mt-10 mb-10']) }}--}}
+                    {{--                            <datalist>--}}
 
-                            </datalist>
+                    {{--                            </datalist>--}}
 
-                        </div>
+                    {{--                        </div>--}}
 
-                        <div class="input-group collect-from-store mt-10px grid deliver">
-                            <h4 class="heading-4">Address details</h4>
-                            {{ Form::label('address', 'Please enter your address', ['class' => 'width-100 block no-margins mt-10 mb-10']) }}
-                        </div>
-                    </div>
+                    {{--                        <div class="input-group collect-from-store mt-10px grid deliver">--}}
+                    {{--                            <h4 class="heading-4">Address details</h4>--}}
+                    {{--                            {{ Form::label('address', 'Please enter your address', ['class' => 'width-100 block no-margins mt-10 mb-10']) }}--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
                 </div>
-                {{ Form::hidden('', '') }}
-                {{ Form::submit('Add to card', ['class' => 'button mt-30']) }}
+
+                <div class="flex row center mt-30">
+                    {{ Form::submit('Add to card', ['class' => 'button mr-20']) }}
+                    {{ Form::text('', '', ['class' => 'pizza-price no-border', 'disabled' => true]) }}
+                </div>
                 {!! Form::close() !!}
             </div>
 

@@ -11,13 +11,6 @@
         </div>
     </div>
 
-    {!! Form::open(['action' => 'PagesController@index', 'method' => 'POST', 'class' => 'form gray-bg']) !!}
-        <div class="from__group wrapper">
-            {{ Form::text('q', '', ['class' => 'form__input search__input form__input--input-field no-margins', 'placeholder' => 'Search for pizzas…']) }}
-            {{ Form::submit('', ['class' => 'form__input form__input--submit']) }}
-        </div>
-    {!! Form::close() !!}
-
     <div class="wrapper section section__pizzas">
         <h2 class="heading-2">Pizzas</h2>
 
@@ -43,6 +36,7 @@
     </div>
 
     <div class="wrapper section section__custom-pizza">
+
         @if(count($customPizzas) > 0)
 
         @else

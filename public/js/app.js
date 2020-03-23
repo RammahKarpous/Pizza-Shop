@@ -98,9 +98,7 @@ links.forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
   });
-});
-var checked = document.querySelector('.size-tags input');
-checked.checked = "true";
+}); // Calculating the total price
 
 /***/ }),
 

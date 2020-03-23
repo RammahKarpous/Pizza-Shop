@@ -98,6 +98,10 @@ label, .label {
     border: 1px solid lighten($gray, 30%) !important;
 }
 
+.no-border {
+    border: none;
+}
+
 // Headings and text
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -168,6 +172,10 @@ footer, .section {
     align-items: center;
 }
 
+.flex-end {
+    align-items: flex-end;
+}
+
 .block {
     display: block;
 }
@@ -195,6 +203,10 @@ footer, .section {
 
 .mr-20 {
     margin-right: 20px;
+}
+
+.mr-30 {
+    margin-right: 30px;
 }
 
 .mb-10 {

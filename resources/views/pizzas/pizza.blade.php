@@ -53,3 +53,7 @@
         </div>
     </div>
 @endsection
+
+@section('extra-scripts')
+    <script src="{{ asset('js/custom_pizza.js') }}"></script>
+@endsection

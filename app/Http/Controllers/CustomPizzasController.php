@@ -7,16 +7,15 @@ use App\CustomPizza;
 use App\Topping;
 use App\Size;
 
-class CustomPizzasController extends Controller
-{
+class CustomPizzasController extends Controller {
     public function customPizza() {
         $toppings = Topping::all();
-        $sizes = Size::all();
+        $sizes    = Size::all();
 
-        return view('pizzas.create', [
+        return view( 'pizzas.create', [
             'toppings' => $toppings,
-            'sizes' => $sizes
-        ]);
+            'sizes'    => $sizes
+        ] );
     }
 
     public function add( Request $request ) {

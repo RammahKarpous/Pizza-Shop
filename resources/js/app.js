@@ -6,5 +6,4 @@ links.forEach((link) => {
     });
 });
 
-let checked = document.querySelector('.size-tags input');
-checked.checked = "true";
+// Calculating the total price
