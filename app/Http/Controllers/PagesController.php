@@ -10,9 +10,11 @@ use App\User;
 class PagesController extends Controller {
     public function index() {
 
+        $user_id = auth()->user('id');
+
         return view( 'pages.index', [
-            'pizzas'       => Pizza::where( 'id', '!==', '' )->get(),
-            'customPizzas' => Pizza::where( 'user_id', '!=', '0' )->get()
+            'pizzas'       => Pizza::whereNull('user_id')->get(),
+            'customPizzas' => Pizza::where( 'user_id', '==', $user_id )->get()
         ] );
     }
 }
