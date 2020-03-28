@@ -118,7 +118,7 @@
 /* =============================== Pizza grid styling =============================== */
 .section__pizzas {
     .heading-2 {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .section__pizza-card {
@@ -145,7 +145,10 @@
         }
     }
 }
-
+.pizza-price--total {
+    font-size: 1.7em;
+    font-weight: 600;
+}
 /* =============================== Custom pizza form styling =============================== */
 .custom-pizza {
     .custom-pizza__name {

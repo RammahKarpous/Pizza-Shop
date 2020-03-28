@@ -100,6 +100,14 @@ links.forEach(function (link) {
   });
 }); // Calculating the total price
 
+var pizzaPrices = document.querySelectorAll('.pizza-price--size');
+var totalPrice = document.querySelector('.pizza-price--total');
+pizzaPrices.forEach(function (pizzaPrice) {
+  pizzaPrice.addEventListener('change', function () {
+    totalPrice.setAttribute('value', "\xA3 ".concat(pizzaPrice.value));
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/sass/app.scss":

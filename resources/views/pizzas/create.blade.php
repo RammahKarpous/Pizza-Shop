@@ -29,7 +29,7 @@
                     @if(count($sizes) > 0)
                         @foreach($sizes as $size)
                             <div class="form-field tag-wrapper">
-                                <input type="radio" name="sizes" value="{{ $size->topping_price  }}" id="{{ $size->size  }}">
+                                <input type="radio" name="sizes" class="pizza-price--size" value="{{ $size->topping_price  }}" id="{{ $size->size  }}">
                                 <label class="tag-label" for="{{ $size->size  }}">{{ $size->size }}</label>
                             </div>
                         @endforeach
@@ -94,8 +94,9 @@
 
                 <div class="flex row center mt-30">
                     {{ Form::submit('Add to card', ['class' => 'button mr-20']) }}
-                    {{ Form::text('', '', ['class' => 'pizza-price no-border', 'disabled' => true]) }}
+                    {{ Form::text('total_price', '£ 0.90', ['class' => 'pizza-price--total no-border', 'disabled' => true]) }}
                 </div>
+                @csrf
                 {!! Form::close() !!}
             </div>
 

@@ -379,7 +379,7 @@ footer,
 /* =============================== Pizza grid styling =============================== */
 
 .section__pizzas .heading-2 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .section__pizzas .section__pizza-card .pizza-card__image {
@@ -405,6 +405,11 @@ footer,
           align-items: center;
   color: #ffffff;
   padding: 15px;
+}
+
+.pizza-price--total {
+  font-size: 1.7em;
+  font-weight: 600;
 }
 
 /* =============================== Custom pizza form styling =============================== */
